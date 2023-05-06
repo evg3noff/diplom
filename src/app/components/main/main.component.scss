@@ -4,8 +4,13 @@
 }
 .slider{
     margin-top: 96px;
+
+    @media (max-width: 1024px){
+        display: none;
+    }
 }
 .footer {
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
