@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { PromotionBannerComponent } from './components/promotion-banner/promotion-banner.component';
 import { AuthorisationPageComponent } from './components/authorisation-page/authorisation-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AuthorisationPageComponent } from './components/authorisation-page/auth
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
