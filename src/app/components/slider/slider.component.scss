@@ -1,8 +1,138 @@
-.slider-content {
+.sliders {
     width: 85%;
+    position: relative;
+
+    @media (max-width: 1520px){
+        width: 100%;
+    }
 }
 
 .slider-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: all ease 0.2s;
+}
+
+.slide{
+    width: 100%;
+    max-height: 442px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transition: all ease 0.2s;
+}
+
+.btn-buy{
+    position: absolute;
+    z-index: 100;
+    width: 20%;
+    height: 15%;
+    top: 75%;
+    left: 10%;
+    background-color: #e2030300;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #9BE15D;
+    padding: 12px 24px;
+    border: 1px solid #9BE15D;
+    cursor: pointer;
+    border-radius: 15px;
+
+    &:hover {
+        background-color: #275A15;
+        color: #FFF;
+    }
+
+    @media (max-width: 1400px){
+        font-size: 18px;
+        padding: 5px 12px;
+    }
+}
+
+img {
+    width: 100%;
+    max-width: 1442px;
+    height: auto;
+    transition: all ease 0.2s;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    margin-left: 10px;
+    background-color: #a3b19d;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.arrows {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    font-size: 55px;
+    color: white;
+
+    @media (max-width: 1600px){
+        font-size: 30px;
+    }
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    background-color: #409b1fb2;
+    border-radius: 15%;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        background-color: #5eee2ae1;
+    }
+}
+
+.next {
+    position: absolute;
+    right: 10%;
+    top: 45%;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+
+    @media (max-width: 1600px){
+        right: 4%;
+        min-width: 40px;
+        height: 40px;
+    }
+}
+
+.prev {
+    position: absolute;
+    left: 10%;
+    top: 45%;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+
+    @media (max-width: 1600px){
+        left: 4%;
+        min-width: 40px;
+        height: 40px;
+    }
 }

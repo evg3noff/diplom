@@ -1,5 +1,21 @@
 <div class="slider-container">
-    <div class="slider-content">
-        
+    <div class="sliders">
+        <div class="slide" 
+            *ngFor="let slider of sliders; let i = index"
+            [style.display]="slider.active ? 'flex' : 'none'"
+        >
+            <button class="btn-buy" *ngIf="slider.button">Купить</button>
+            <img [src]="slider.imagePath" alt="">
+        </div>
+        <div class="arrows">
+            <div class="arrow next center-container" (click)="nextSlide()"><div>&#10095;</div></div>
+            <div class="arrow prev center-container" (click)="prevSlide()"><div>&#10094;</div></div>
+        </div>
+    </div>
+    <div class="dots">
+        <div class="dot" *ngFor="let slider of sliders; let ind = index" 
+        [style.background-color]="slider.active ? '#275A15' : '#a3b19d'"
+        (click)="goToSlide(ind)"
+        ></div>
     </div>
 </div>
