@@ -1,10 +1,9 @@
 .promotion{
+    display: flex;
+    flex-direction: column;
     max-width: 1443px;
     width: 85%;
-    height: 225px;
-    background: radial-gradient(15.11% 353.33% at 68.53% 39.33%, rgba(255, 215, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%),radial-gradient(9.73% 243.33% at 84.62% 28.89%, rgba(255, 215, 0, 0.5) 0%, rgba(255, 215, 0, 0) 100%),radial-gradient(71.11% 596.67% at 79.2% 44.89%, rgba(132, 79, 209, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(0, 0, 0, 0) 100%),#2BC604;
     border-radius: 10px;
-    border-bottom: 100px;
 }
 
 .promotion-wrap{
@@ -13,7 +12,7 @@
 }
 .promotion-container{
     width: 100%;
-    height: 100%;
+    background: radial-gradient(15.11% 353.33% at 68.53% 39.33%, rgba(255, 215, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%),radial-gradient(9.73% 243.33% at 84.62% 28.89%, rgba(255, 215, 0, 0.5) 0%, rgba(255, 215, 0, 0) 100%),radial-gradient(71.11% 596.67% at 79.2% 44.89%, rgba(132, 79, 209, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(0, 0, 0, 0) 100%),#2BC604;
     display: flex;
     align-items: center;
 }
@@ -52,7 +51,7 @@
     right: 60px;
     width: 436px;
     height: 346px;
-    margin-top: -121px;
+    margin-top: -175px;
     background-image: url(/assets/promotionPhone.png);
 }
 .promotion-containerDLC{
@@ -62,7 +61,7 @@
     max-width: 1443px;
     max-height: 150px;
     width:100%;
-    height: 100%;
+    height: 150px;
     align-items: center;
     background-color: #2BC604;
 }
@@ -83,6 +82,6 @@
     max-width: 1443px;
     max-height: 150px;
     width:100%;
-    height: 100%;
+    height: 150px;
     align-items: center;
     background-color: #2BC604;}
