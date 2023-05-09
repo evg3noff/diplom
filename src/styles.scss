@@ -26,3 +26,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text-center {
     text-align: center;
 }
+
+.goods-card {
+    width: 275px;
+    height: 275px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 17px;
+    position: relative;
+    cursor: pointer;
+}
