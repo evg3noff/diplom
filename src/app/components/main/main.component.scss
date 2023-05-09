@@ -2,6 +2,37 @@
     display: block;
     min-height: 100%;
 }
+.bottom-banner {
+    margin-top: 200px;
+}
+
+.sale{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.sale-wrap {
+    width: 1443px;
+    height: 155px;
+    background-color: #72CB11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sale-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 .slider{
     margin-top: 96px;
 
