@@ -13,12 +13,12 @@ export class SliderComponent {
       button: true
     },
     {
-      imagePath: '/assets/RectangleRED.png',
+      imagePath: '/assets/spinner2.png',
       active: false,
       button: false
     },
     {
-      imagePath: '/assets/RectangleGROW.png',
+      imagePath: '/assets/spinner3.png',
       active: false,
       button: false
     },

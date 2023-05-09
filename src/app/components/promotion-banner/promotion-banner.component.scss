@@ -57,31 +57,37 @@
 .promotion-containerDLC{
     display: flex;
     justify-content: center;
-    flex-direction: column;
     max-width: 1443px;
     max-height: 150px;
     width:100%;
     height: 150px;
     align-items: center;
-    background-color: #2BC604;
 }
 .promotion-containerDLC2{ 
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    max-width: 1443px;
+    flex-direction: row;
     max-height: 150px;
     width:100%;
     height: 100%;
     align-items: center;
-    background-color: #2BC604;
 }
-.promotion-containerDLC2{ display: flex;
+.promotion-containerDLC3{ 
+    display: flex;
     justify-content: center;
     flex-direction: column;
-    max-width: 1443px;
     max-height: 150px;
-    width:100%;
-    height: 150px;
+    height: 100%;
     align-items: center;
-    background-color: #2BC604;}
+}
+.promotion-txt2{
+    max-width: 165px;
+    width: 100%;
+    height: auto;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+}
