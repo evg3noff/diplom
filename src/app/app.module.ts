@@ -12,6 +12,8 @@ import { AuthorisationPageComponent } from './components/authorisation-page/auth
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import { SalesListComponent } from './components/sales-list/sales-list.component';
+import { PersonalMemberComponent } from './components/personal-member/personal-member.component';
+import { AccountComponent } from './components/account/account.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SalesListComponent } from './components/sales-list/sales-list.component
     SliderComponent,
     PromotionBannerComponent,
     AuthorisationPageComponent,
-    SalesListComponent
+    SalesListComponent,
+    PersonalMemberComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
