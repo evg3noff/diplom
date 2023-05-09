@@ -1,0 +1,46 @@
+section{
+    display: flex;
+    justify-content: center;
+}
+
+.sales-list {
+    display: flex;
+    width: 1443px;
+    flex-wrap: wrap;
+}
+
+.sales-item {
+    width: 275px;
+    height: 208px;
+    background-color: #9BE15D;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 17px;
+    position: relative;
+    cursor: pointer;
+
+    img{
+        position: absolute;
+        width: 230px;
+        height: auto;
+        bottom: 0;
+        left: 25px;
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.item-text{
+    z-index: 5;
+    position: relative;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: #6B6868;
+}
