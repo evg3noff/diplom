@@ -1,0 +1,30 @@
+section{
+    display: flex;
+    justify-content: center;
+}
+
+.goods-list {
+    display: flex;
+    width: 1443px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: #E7E4E4;
+    margin-right: 17px;
+    position: relative;
+
+    &:nth-child(5){
+        margin-right: 0px;
+    }
+
+    &:nth-child(10){
+        margin-right: 0px;
+    }
+
+    img {
+        position: absolute;
+        bottom: 20%;
+        left: 10%;
+    }
+}

@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { SalesListComponent } from './components/sales-list/sales-list.component';
 import { PersonalMemberComponent } from './components/personal-member/personal-member.component';
 import { AccountComponent } from './components/account/account.component';
+import { GoodsListComponent } from './components/goods-list/goods-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AccountComponent } from './components/account/account.component';
     AuthorisationPageComponent,
     SalesListComponent,
     PersonalMemberComponent,
-    AccountComponent
+    AccountComponent,
+    GoodsListComponent
   ],
   imports: [
     BrowserModule,
