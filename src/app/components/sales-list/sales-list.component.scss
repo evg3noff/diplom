@@ -7,6 +7,10 @@ section{
     display: flex;
     width: 1443px;
     flex-wrap: wrap;
+
+    @media (max-width: 1442px){
+        justify-content: center;
+    }
 }
 
 .sales-item {
@@ -22,6 +26,10 @@ section{
 
     &:last-child {
         margin-right: 0px;
+    }
+
+    @media (max-width: 1442px){
+        margin-right: 17px;
     }
 }
 
