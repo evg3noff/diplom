@@ -1,6 +1,5 @@
 .end {
     width: 100%;
-    height: 684px;
     background-image: url(/assets/end.png);
 }
 .container_footer{
@@ -9,6 +8,10 @@
     flex-direction: column;
     width: 85%;
     height: 100%;
+
+    @media (max-width: 1555px) {
+        width: 100%;
+    }
 }
 .end_container{
     margin-top: 43px;
@@ -16,6 +19,10 @@
     height: 360px;
     background: linear-gradient(260.62deg, #9BE15D 42.91%, #349A70 90.8%);
     border-radius: 20px;
+
+    @media (max-width: 1555px) {
+        display: none;
+    }
 }
 .container_footer2{
     margin-top: 43px;
@@ -38,7 +45,6 @@
 .container_footer4{
     display: flex;
     width: 100%;
-    height: 240px;
     align-content: center;
 }
 .container_footer5{
@@ -59,7 +65,6 @@
 .container_footer7{
     display: flex;
     width: 100%;
-    height: 50%;
     align-content: center;
 }
 .container_footer8{
@@ -159,10 +164,7 @@
     margin-right: 50px;
 }
 .footer_txt3{
-    max-width: 171px;
-    max-height: 20px;
     width: 100%;
-    height: 100%;
     font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: 400;
@@ -186,8 +188,6 @@
     cursor: pointer;
 }
 .footer_txt5{
-    max-width: 504px;
-    max-height: 20px;
     font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: 500;
@@ -196,10 +196,13 @@
     text-align: center;
     color: #000;
     margin-top: 35px;
-    margin-left: 80px;
 }
 .footer_txtDLC{
     margin-left: 175px;
+
+    @media (max-width: 1555px) {
+        margin-left: 0px;
+    }
 }
 .icon1{
     width: 100%;

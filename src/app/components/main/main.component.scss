@@ -4,6 +4,10 @@
 }
 .bottom-banner {
     margin-top: 200px;
+
+    @media (max-width: 500px) {
+        display: none;
+    }
 }
 
 .sale{
@@ -38,5 +42,11 @@
 
     @media (max-width: 1024px){
         display: none;
+    }
+}
+
+.sales-list {
+    @media (max-width: 500px) {
+        margin-bottom: 100px;
     }
 }
