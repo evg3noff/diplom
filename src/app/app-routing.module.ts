@@ -7,6 +7,7 @@ import { PersonalMemberComponent } from './components/personal-member/personal-m
 const routes: Routes = [
   {path: '', component: MainComponent},
   {path: 'auth', component: AuthorisationPageComponent},
+  {path: 'registration', component: AuthorisationPageComponent},
   {path: 'personal-member', component: PersonalMemberComponent}
 ];
 

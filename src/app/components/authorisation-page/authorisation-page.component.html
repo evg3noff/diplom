@@ -12,35 +12,39 @@
         </div>
     </div>
 </div>
-<div class="container-body">
-    <div class="container-body2">
-        <div class="container-txt">Телефон</div>
-    </div>
-    <div class="container-body2">
-        <input class="container-txt2" type="tel" id="input1" placeholder="+7">
-    </div>
-    <div class="container-body2">
-        <div class="container-border"></div>
-    </div>
-    <div class="container-body2">
-        <div class="container-txt">Пароль</div>
-    </div>
-    <div class="container-body2">
-        <input class="container-txt2" type="password" id="input2">
-    </div>
-    <div class="container-body2">
-        <div class="container-border"></div>
-    </div>
-    <div class="container-body2">
-        <div class="container-body3">
-            <div class="container-txt3">Регистрация</div>
+<ng-container *ngIf="!registration">
+    <div class="container-body">
+        <div class="container-body2">
+            <div class="container-txt">Телефон</div>
         </div>
-        <div class="container-body3">
-            <div class="container-txt3" id="txt1">Забыли пароль?</div>
+        <div class="container-body2">
+            <input class="container-txt2" type="tel" id="input1" placeholder="+7">
+        </div>
+        <div class="container-body2">
+            <div class="container-border"></div>
+        </div>
+        <div class="container-body2">
+            <div class="container-txt">Пароль</div>
+        </div>
+        <div class="container-body2">
+            <input class="container-txt2" type="password" id="input2">
+        </div>
+        <div class="container-body2">
+            <div class="container-border"></div>
+        </div>
+        <div class="container-body2">
+            <div class="container-body3">
+                <div class="container-txt3">Регистрация</div>
+            </div>
+            <div class="container-body3">
+                <div class="container-txt3" id="txt1">Забыли пароль?</div>
+            </div>
+        </div>
+        <div class="container-body4">
+            <button class="default-button" id="button1">Войти</button>
         </div>
     </div>
-    <div class="container-body4">
-        <button class="default-button" id="button1">Войти</button>
-    </div>
-</div>
-
+</ng-container>
+<ng-container *ngIf="registration">
+    
+</ng-container>
