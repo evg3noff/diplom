@@ -28,7 +28,7 @@ import { GoodsListComponent } from './components/goods-list/goods-list.component
     SalesListComponent,
     PersonalMemberComponent,
     AccountComponent,
-    GoodsListComponent
+    GoodsListComponent,
   ],
   imports: [
     BrowserModule,
