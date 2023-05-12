@@ -4,6 +4,11 @@
     max-width: 1443px;
     width: 85%;
     border-radius: 10px;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        max-width: none;
+    }
 }
 
 .promotion-wrap{
@@ -23,6 +28,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1250px) {
+        width: 100%;
+    }
 }
 .promotion-container3{
     position: relative;
@@ -31,6 +40,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1250px) {
+        display: none;
+    }
 }
 .promotion-txt{
     max-width: 549px;
@@ -46,6 +59,16 @@
     margin-top: 30px;
     line-height: normal;
     letter-spacing: 0;
+
+    @media (max-width: 1250px) {
+        max-width: none;
+        height: auto;
+        margin: 20px;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 27px;
+    }
 }
 .promotion-photo{
     position: absolute;
@@ -54,6 +77,10 @@
     height: 346px;
     margin-top: -175px;
     background-image: url(/assets/promotionPhone.png);
+
+    @media (max-width: 1250px) {
+        display: none;
+    }
 }
 .promotion-containerDLC{
     display: flex;
