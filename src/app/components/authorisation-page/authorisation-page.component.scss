@@ -8,7 +8,6 @@
     max-width: 251px;
     max-height: 21px;
     width: 100%;
-    height: 100%;
     justify-content: center;
     align-items: center;
     font-family: 'SF Pro Display';
@@ -17,7 +16,6 @@
     font-size: 18px;
     line-height: 21px;
     color: #000;
-    margin-top: 25%;
 }
 .backreg {
     position: absolute;
@@ -128,6 +126,24 @@ max-height: 159px;
     margin-left: 13%;
     flex-direction: column;
 }
+.container-body2-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 440px;
+    max-height: 548px;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 15.5%;
+    flex-direction: column;
+}
+.container-body2-2{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 .container-body2{
     display: flex;
     align-items: center;
@@ -157,7 +173,26 @@ max-height: 159px;
     margin-left: 8px;
     margin-top: -10px;
 }
+.container-txt2-0{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+    margin-left: 8px;
+    margin-top: -45px;
+}
 .container-txt2{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000; 
+}
+.container-txt2-2{
     font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: 300;
@@ -177,8 +212,26 @@ max-height: 159px;
     margin-top: -78px;
     cursor: pointer;
 }
+.container-txt3-1{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+    margin-top: -78px;
+}
 #txt1{
     margin-left: 120px;
+}
+#txt2{
+    margin-left: -20px;
+}
+#txt3{
+    margin-top: 12%;
+}
+#txt4{
+    margin-top: 25%;
 }
 .container-border{
     width: 100%;
