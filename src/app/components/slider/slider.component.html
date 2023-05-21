@@ -4,7 +4,7 @@
             *ngFor="let slider of sliders; let i = index"
             [style.display]="slider.active ? 'flex' : 'none'"
         >
-            <button class="btn-buy" *ngIf="slider.button">Купить</button>
+            <button class="btn-buy" *ngIf="slider.button" routerLink="/goods/auto">Купить</button>
             <img [src]="slider.imagePath" alt="">
         </div>
         <div class="arrows">

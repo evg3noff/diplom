@@ -3,12 +3,23 @@
         class="logo-container center-container">
         <img src="/assets/Logo.png">
     </a>
-    <div class="catalog-btn-container center-container">
+    <div class="catalog-btn-container center-container" mat-button [matMenuTriggerFor]="catalogMenu">
         <button class="ctlg-btn">
             <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="reorder"></mat-icon>
             <div class="ctlg-btn-text">Каталог</div>
         </button>
     </div>
+    <mat-menu #catalogMenu="matMenu" xPosition="before">
+        <a mat-menu-item routerLink="/goods/laptop">Ноутбуки</a>
+        <a mat-menu-item routerLink="/goods/pc">Компьютеры</a>
+        <a mat-menu-item routerLink="/goods/smartphones">Смартфоны</a>
+        <a mat-menu-item routerLink="/goods/gadgets">Гаджеты</a>
+        <a mat-menu-item routerLink="/goods/tv">Телевизоры</a>
+        <a mat-menu-item routerLink="/goods/fun">Развлечения</a>
+        <a mat-menu-item routerLink="/goods/home">Для Дома</a>
+        <a mat-menu-item routerLink="/goods/auto">Автотовары</a>
+        <a mat-menu-item routerLink="/goods/ssd">SSD накопители</a>
+    </mat-menu>
     <div class="search-container center-container">
         <div class="search-wrap center-container">
             <input type="text" class="input-search" placeholder="Поиск товара...">
@@ -51,9 +62,16 @@
                     Корзина
                 </div>
             </li>
-            <div class="menu-icon center-container">
+            <div class="menu-icon center-container" mat-button [matMenuTriggerFor]="cabinetMenu">
                 <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="reorder"></mat-icon>
             </div>
         </ul>
+
+        <mat-menu #cabinetMenu="matMenu" xPosition="before">
+            <div mat-menu-item class="">Войти</div>
+            <div mat-menu-item>Заказы</div>
+            <div mat-menu-item>Избранное</div>
+            <div mat-menu-item>Корзина</div>
+        </mat-menu>
     </div>
 </div>

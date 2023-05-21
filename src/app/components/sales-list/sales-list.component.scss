@@ -31,6 +31,10 @@ section{
     @media (max-width: 1442px){
         margin-right: 17px;
     }
+
+    &:hover {
+        background: linear-gradient(90deg,#00E3AE 0%, #9BE15D 100%);
+    }
 }
 
 .sales-item-text{
