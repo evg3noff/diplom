@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AuthorisationPageComponent implements OnInit {
 
-  registration: boolean = true;
+  registration: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
