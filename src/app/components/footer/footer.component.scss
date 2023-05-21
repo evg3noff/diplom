@@ -186,6 +186,11 @@
     color: #000;
     margin-top: 12px;
     cursor: pointer;
+
+    &:hover {
+        color: #1a1919a3;
+        text-decoration: underline;
+    }
 }
 .footer_txt5{
     font-family: 'SF Pro Display';
