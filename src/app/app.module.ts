@@ -15,6 +15,13 @@ import { SalesListComponent } from './components/sales-list/sales-list.component
 import { PersonalMemberComponent } from './components/personal-member/personal-member.component';
 import { AccountComponent } from './components/account/account.component';
 import { GoodsListComponent } from './components/goods-list/goods-list.component';
+import { environment } from '../environments/environment';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { GoodsCategoryPageComponent } from './components/goods-category-page/goods-category-page.component';
+import { AddCharPipe } from './pipes/add-char.pipe';
+import { CharLimitPipe } from './pipes/char-limit.pipe';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -29,12 +36,18 @@ import { GoodsListComponent } from './components/goods-list/goods-list.component
     PersonalMemberComponent,
     AccountComponent,
     GoodsListComponent,
+    GoodsCategoryPageComponent,
+    AddCharPipe,
+    CharLimitPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,72 +1,25 @@
-<div class="center-horizontal-container">
+<div class="center-horizontal-container" *ngIf="main">
     <h2>Рекомендации</h2>
 </div>
 <section class="center-horizontal-container">
     <ul class="goods-list">
-        <li class="goods-card">
+        <li class="goods-card" *ngFor="let good of goods">
             <div class="card">
-                <img src="/assets/goods1.png">
+                <img [src]="good.img">
             </div>
             <div class="item-content">
                 <h3 class="item-price">
-                    <div class="main-price">101 700 ₽</div>
-                    <div class="old-price"><del>113 000 ₽</del></div>
+                    <div class="main-price" *ngIf="good.mainPrice">{{good.mainPrice}}₽</div>
+                    <div class="old-price" *ngIf="good.oldPrice"><del>{{good.oldPrice}}₽</del></div>
                 </h3>
                 <div class="item-description">
-                    Смартфон Apple IPhone 14
-                    <br>
-                    Pro Max 256Gb Deep Purple
+                    {{good.description}}
                 </div>
                 <div class="actions">
                     <button class="default-button">Купить</button>
                     <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="favorite" class="red"></mat-icon>
                     <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="favorite_border"></mat-icon>
                 </div>
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods2.png">
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods3.png">
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods4.png">
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods5.png">
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods6.png">
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods7.png">
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods8.png">
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods9.png">
-            </div>
-        </li>
-        <li class="goods-card">
-            <div class="card">
-                <img src="/assets/goods10.png">
             </div>
         </li>
     </ul>
