@@ -26,7 +26,7 @@ export class AuthorisationPageComponent implements OnInit, OnDestroy {
   }
 
   failLogin: boolean = false;
-  errMessage: string | undefined;
+  errMessage: string;
 
   constructor(
     private route: ActivatedRoute,
