@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subject } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-goods-category-page',
@@ -24,7 +24,7 @@ export class GoodsCategoryPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe(res => {
+    this.route.params.pipe(takeUntil(this.unsubscribe$)).subscribe(res => {
       this.category = res["GoodsCategory"];
       console.log(this.category);
     });
