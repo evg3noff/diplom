@@ -7,5 +7,6 @@ export const environment = {
         messagingSenderId: "598899645701",
         appId: "1:598899645701:web:f98dd0d401ea0593886b6c"
     },
-    production: true
+    production: true,
+    apiUrl: "http://localhost:3500/api/"
 };
