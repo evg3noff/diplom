@@ -1,0 +1,130 @@
+.section-container{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 85%;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000;
+}
+.main-container{
+    display: flex;
+    margin-top: 8%;
+    margin-left: 10%;
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+}
+.order-container{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: start;
+    align-items: center;
+}
+.card{
+    width: 400px;
+    height: 400px;
+    padding: 14px;
+    background: #7d7c7c;
+    border-radius: 10px;
+
+
+    img {
+        width: 100%;
+    }
+}
+.item-description {
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+    height: auto;
+    width: 250px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    color: #000;
+}
+.item-container{
+    margin-bottom: 10px;
+    height: 400px;
+    width: auto;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.item-category{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+    height: auto;
+    width: 250px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 25px;
+    margin-bottom: 60px;
+}
+.item-price{
+    display: flex;
+    margin-bottom: 0px;
+    justify-content: right;
+    align-items: center;
+    width: auto;
+    margin-left: 500px;
+    height: 100%;
+    flex-direction: column;
+}
+.mainPrice{
+    font-family: 'SF Pro Display';
+    font-size: 23px;
+    color: 000;
+    font-style: normal;
+    font-weight: 800;
+    margin-top: 55%;
+}
+.oldPrice{
+    color: #A49595;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    text-decoration-line: line-through;
+    margin-top: 25%;
+}
+.actions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+    width: 100%;
+
+    .default-button {
+        margin-left: 55%;
+        margin-top: 10px;
+
+    }
+}
+#button1{
+    width: 300px;
+    font-family: 'SF Pro Display';
+    height: 50px;
+    font-size: 20px;
+}
+.ScorePrice{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+}

@@ -1,7 +1,49 @@
+.container-main{
+    display: flex;
+    height: 100%;
+    width: 55%;
+    justify-content: center;
+}
+.container-reg{
+    display: flex;
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formFORreg{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+#border{
+    width: 100%;
+    border-bottom: 1px solid #4D8E13;
+}
+#doubleFORMforreg{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .mainbody{
     display: flex;
     width: 30%;
     height: auto
+}
+.copyright{
+    position: absolute;
+    top: 95%;
+    left: 154px;
+    display: flex;
+    width: 100%;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
 }
 .mainbody2{
     display: flex;
@@ -77,12 +119,14 @@
     max-height: 159px;
 }
 .container_logo{
+    position: absolute;
+    top: 38px;
+    left: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 296px;
     height: 150px;
-    margin-left: 62px;
     align-items: center;
     cursor: pointer;
 }
@@ -109,7 +153,7 @@
     justify-content: center;
     align-items: center;
 }
-.container-body{
+.container-inputbody{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,8 +161,8 @@
     max-height: 284px;
     width: 100%;
     height: 100%;
-    margin-top: 15%;
-    margin-left: 13%;
+    padding-top: 20px;
+    padding-left: 20px;
     flex-direction: column;
 }
 .container-body2-1{
@@ -158,7 +202,7 @@
     width: 100%;
     height: 100%;
 }
-.container-txt{
+.txtFORreg{
     font-family: 'SF Pro Display';
     font-style: normal;
     font-weight: 400;
@@ -204,7 +248,6 @@
     line-height: 17px;
     text-decoration-line: underline;
     color: #008969;
-    margin-top: -78px;
     cursor: pointer;
 }
 .container-txt3-1{
@@ -214,10 +257,14 @@
     font-size: 16px;
     line-height: 19px;
     color: #000;
-    margin-top: -78px;
 }
 #txt1{
-    margin-left: 120px;
+    margin-left: 80px;
+    text-align: right;
+}
+#txt1-2{
+    justify-content: right;
+    text-align: right;
 }
 #txt2{
     margin-left: -20px;
@@ -301,7 +348,10 @@
     max-width: 227px;
     width: 100%;
     height: 49px;
-    margin-top: -40px;
     font-weight: 700;
     font-size: 20px;
+    justify-content: center;
+}
+#reg{
+    margin-top: 17%;
 }

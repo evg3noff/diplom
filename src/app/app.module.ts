@@ -24,6 +24,9 @@ import { CharLimitPipe } from './pipes/char-limit.pipe';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OrderStoryComponent } from './components/order-story/order-story.component';
+import { CartStoryComponent } from './components/cart-story-page/cart-story.component';
+import { TovPageComponent } from './components/tov-page/tov-page.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
     GoodsCategoryPageComponent,
     AddCharPipe,
     CharLimitPipe,
+    OrderStoryComponent,
+    CartStoryComponent,
+    TovPageComponent
   ],
   imports: [
     BrowserModule,

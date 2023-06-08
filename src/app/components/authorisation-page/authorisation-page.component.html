@@ -1,7 +1,37 @@
 <div class="container_logo" routerLink="/">
     <div class="Logoreg"></div>
-    <div class="txtlogo">Магазин электроники</div> 
+    <div class="txtlogo">Магазин электроники</div>
 </div>
+<ng-container *ngIf="!registration">
+<div class="container-main">
+    <div class="container-reg">
+    <div class="formFORreg">
+        <div class="txtFORreg">Телефон</div>
+    </div>
+    <div class="formFORreg" id="border">
+        <input class="container-txt2" type="tel" id="input1" placeholder="+7" [(ngModel)]="loginObject.name">
+    </div>
+    <div class="formFORreg">
+        <div class="txtFORreg">Пароль</div>
+    </div>
+    <div class="formFORreg" id="border">
+        <input class="container-txt2" type="password" id="input2" [(ngModel)]="loginObject.password">
+    </div>
+    <div class="formFORreg">
+        <div class="formFORreg">
+            <div class="container-txt3" (click)="switchReg()">Регистрация</div>    
+        </div>
+        <div class="formFORreg"> 
+            <div class="container-txt3" id="txt1">Забыли пароль?</div>
+        </div>
+    </div>
+    <div class="formFORreg" id="button1">
+        <button class="default-button" id="button1" (click)="submitLogin()">Войти</button> 
+    </div>
+    </div>
+<div class="copyright">© TechnoSpot, 2023</div>
+</div>
+</ng-container>
 <ng-container *ngIf="!registration">
 <div class="backreg" routerLink="/">
     <div class="container_backreg">
@@ -12,42 +42,6 @@
         </div>
     </div>
 </div>
-</ng-container>
-<ng-container *ngIf="!registration">
-    <div class="container-body">
-        <div class="container-body2">
-            <div class="container-txt">Телефон</div>
-        </div>
-        <div class="container-body2">
-            <input class="container-txt2" type="tel" id="input1" placeholder="+7" [(ngModel)]="loginObject.name">
-        </div>
-        <div class="container-body2">
-            <div class="container-border"></div>
-        </div>
-        <div class="container-body2">
-            <div class="container-txt">Пароль</div>
-        </div>
-        <div class="container-body2">
-            <input class="container-txt2" type="password" id="input2" [(ngModel)]="loginObject.password">
-        </div>
-        <div class="container-body2">
-            <div class="container-border"></div>
-        </div>
-        <div class="container-body2">
-            <div class="container-body3">
-                <div class="container-txt3" (click)="switchReg()">Регистрация</div>
-            </div>
-            <div class="container-body3">
-                <div class="container-txt3" id="txt1">Забыли пароль?</div>
-            </div>
-        </div>
-        <div class="container-body4">
-            <button class="default-button" id="button1" (click)="submitLogin()">Войти</button>
-        </div>
-    </div>
-    <div class="mainbody">
-        <div class="mainbody2" id="txt4">© TechnoSpot, 2023</div>
-    </div>
 </ng-container>
 <ng-container *ngIf="registration">
     <div class="backreg">
@@ -60,7 +54,55 @@
             </div>
         </div>
     </div>
-    <div class="container-body2-1">
+</ng-container>
+<ng-container *ngIf="registration">
+<div class="container-main">
+    <div class="container-reg" id="reg">
+        <div class="formFORreg">
+            <div class="formFORreg">
+                <div class="container-txt2-0">Зарегистрируйтесь</div>
+            </div>
+        </div>
+    <div class="formFORreg">
+        <div class="txtFORreg">Телефон</div>
+    </div>
+    <div class="formFORreg" id="border">
+        <input class="container-txt2" type="tel" id="input1" placeholder="+7" [(ngModel)]="regObj.name">
+    </div>
+    <div class="formFORreg">
+        <div class="txtFORreg">E-mail</div>
+    </div>
+    <div class="formFORreg" id="border">
+        <input class="container-txt2-2" type="email" id="input1" [(ngModel)]="regObj.email">
+    </div>
+    <div class="formFORreg">
+        <div class="txtFORreg">Пароль</div>
+    </div>
+    <div class="formFORreg" id="border">
+        <input class="container-txt2" type="password" id="input2" [(ngModel)]="regObj.password">
+    </div>
+    <div class="formFORreg">
+        <div class="txtFORreg">Повторите пароль</div>
+    </div>
+    <div class="formFORreg" id="border">
+        <input class="container-txt2" type="password" id="input2" [(ngModel)]="regObj.password">
+    </div>
+    <div class="formFORreg">
+        <div class="formFORreg"> 
+            <div class="container-txt3-1">У вас уже есть профиль?</div>
+        </div>
+        <div class="formFORreg" id="txt1-2">
+            <div class="container-txt3" (click)="switchReg()">Войти</div>    
+        </div>
+    </div>
+    <div class="formFORreg" id="button1">
+        <button class="default-button" id="button1" (click)="reg()">Регистрация</button> 
+    </div>
+    </div>
+<div class="copyright">© TechnoSpot, 2023</div>
+</div>
+</ng-container>
+    <!--<div class="container-body2-1">
         <div class="container-body2-2">
             <div class="container-txt2-0">Зарегистрируйтесь</div>
         </div>
@@ -115,4 +157,4 @@
     <div class="mainbody">
         <div class="mainbody2" id="txt3">© TechnoSpot, 2023</div>
     </div>
-</ng-container>
+-->
