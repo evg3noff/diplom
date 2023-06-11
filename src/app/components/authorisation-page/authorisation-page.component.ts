@@ -54,8 +54,9 @@ export class AuthorisationPageComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe({
         next: (res: any) => {
-          this.router.navigate(['/', 'personal-member']);
+          console.log(res)
           setToSessionStorage('User', res.values.user);
+          this.router.navigate(['/', 'personal-member']);
         },
         error: (err) => {
           console.log(err);
@@ -75,7 +76,9 @@ export class AuthorisationPageComponent implements OnInit, OnDestroy {
     })
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe({
-        next: (res) => {
+        next: (res: any) => {
+          console.log(res);
+          setToSessionStorage('User', res.values.user);
           this.router.navigate(['/', 'personal-member']);
         },
         error: (err) => {
