@@ -7,24 +7,21 @@
                 <br>
             </div>
             <div class="item-text2">
-                <h3><b class="accounttxt">213</b></h3>
+                <h3 *ngIf="userInfo.email"><b class="accounttxt">{{userInfo.email}}</b></h3>
                 <br>
                 <br>
-                
             </div>
         </li>
         <li class="sales-item">
             <div class="item-text">
                 <h3><b>Клиентский номер, ID</b></h3>
                 <br>
-                 <br>
-                
+                <br>
             </div>
             <div class="item-text2">
-                <h3><b class="accounttxt">228</b></h3>
+                <h3 *ngIf="userInfo.id"><b class="accounttxt">{{userInfo.id}}</b></h3>
                 <br>
                 <br>
-                
             </div>
         </li>
         <li class="sales-item">
@@ -32,23 +29,21 @@
                 <h3><b>Статус:</b></h3>
                 <br>
                 <br>
-                
             </div>
             <div class="item-text2">
                 <h3><b class="accounttxt">Постоянный покупатель</b></h3>
                 <br>
                 <br>
-                
             </div>
         </li>
         <li class="sales-item">
             <div class="item-text">
                 <h3><b>Избранное:</b></h3>
                 <br>
-
             </div>
-                <div class="item-container">123
-                </div>
+            <div class="item-container red">
+                <mat-icon aria-hidden="false" aria-label="избранное" fontIcon="favorite" class="favorite"></mat-icon>
+            </div>
         </li>
         <li class="sales-item">
             <div class="item-text">
@@ -56,8 +51,9 @@
                 <br>
                 <br>
             </div>
-                <div class="item-container">123
-                </div>
+            <div class="item-container">
+                <mat-icon aria-hidden="false" aria-label="Корзина" fontIcon="shopping_cart" class="shopping_cart"></mat-icon>
+            </div>
         </li>
     </ul>
 </section>

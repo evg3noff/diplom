@@ -30,17 +30,25 @@
     </div>
     <div class="menu-container center-container">
         <ul class="menu-wrap">
-            <li class="menu-item" routerLink="/auth">
+            <li class="menu-item" routerLink="/auth" *ngIf="!userInfo">
                 <div class="menu-item-icon center-container">
-                    <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="person" class="person"></mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="войти" fontIcon="person" class="person"></mat-icon>
                 </div>
                 <div class="menu-item-text text-center">
                     Войти
                 </div>
             </li>
+            <li class="menu-item" routerLink="/personal-member" *ngIf="userInfo">
+                <div class="menu-item-icon center-container">
+                    <mat-icon aria-hidden="false" aria-label="кабинет" fontIcon="person" class="person"></mat-icon>
+                </div>
+                <div class="menu-item-text text-center">
+                    кабинет
+                </div>
+            </li>
             <li class="menu-item">
                 <div class="menu-item-icon center-container">
-                    <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="work" class="work"></mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="заказы" fontIcon="work" class="work"></mat-icon>
                 </div>
                 <div class="menu-item-text text-center">
                     Заказы
@@ -48,7 +56,7 @@
             </li>
             <li class="menu-item">
                 <div class="menu-item-icon center-container">
-                    <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="favorite" class="favorite"></mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="избранное" fontIcon="favorite" class="favorite"></mat-icon>
                 </div>
                 <div class="menu-item-text text-center">
                     Избранное
@@ -56,7 +64,7 @@
             </li>
             <li class="menu-item">
                 <div class="menu-item-icon center-container">
-                    <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="shopping_cart" class="shopping_cart"></mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Корзина" fontIcon="shopping_cart" class="shopping_cart"></mat-icon>
                 </div>
                 <div class="menu-item-text text-center">
                     Корзина
@@ -68,7 +76,7 @@
         </ul>
 
         <mat-menu #cabinetMenu="matMenu" xPosition="before">
-            <div mat-menu-item class="">Войти</div>
+            <div mat-menu-item>{{this.userInfo ? 'кабинет' : 'войти'}}</div>
             <div mat-menu-item>Заказы</div>
             <div mat-menu-item>Избранное</div>
             <div mat-menu-item>Корзина</div>
