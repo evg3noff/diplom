@@ -18,10 +18,10 @@ const LS_CHANGES$ = new BehaviorSubject<{
   data: any
 }>(null);
 
-export const localStorageChages$ = LS_CHANGES$.asObservable();
+export const SessionStorageChages$ = LS_CHANGES$.asObservable();
 
-export function getFromLocalStorage<T>(key: LSInstances): T {
-  const value = localStorage.getItem(key);
+export function getFromSessionStorage<T>(key: LSInstances): T {
+  const value = sessionStorage.getItem(key);
   try {
     return JSON.parse(value);
   } catch (e) {
@@ -29,23 +29,23 @@ export function getFromLocalStorage<T>(key: LSInstances): T {
   }
 }
 
-export function removeFromLocalStorage(key: LSInstances | LSInstances[]) {
+export function removeFromSessionStorage(key: LSInstances | LSInstances[]) {
   const keyArr = Array.isArray(key) ? key : [key];
   keyArr.forEach(keyName => {
-    localStorage.removeItem(keyName);
+    sessionStorage.removeItem(keyName);
     LS_CHANGES$.next({ key: keyName, data: null });
   });
 }
 
-export function setToLocalStorage(key: LSInstances, data: any): void {
+export function setToSessionStorage(key: LSInstances, data: any): void {
   try {
-    localStorage.setItem(key, JSON.stringify(data));
+    sessionStorage.setItem(key, JSON.stringify(data));
   } catch (e) {
-    localStorage.setItem(key, data);
+    sessionStorage.setItem(key, data);
   }
   LS_CHANGES$.next({ key, data });
 }
 
-export function clearLocalStorage() {
-  localStorage.clear();
+export function clearSessionStorage() {
+  sessionStorage.clear();
 }

@@ -8,5 +8,5 @@ export const environment = {
         appId: "1:598899645701:web:f98dd0d401ea0593886b6c"
     },
     production: false,
-    apiUrl: "http://localhost:3500/api/"
+    apiUrl: "http://technospot64.ru:3500/api/"
 };

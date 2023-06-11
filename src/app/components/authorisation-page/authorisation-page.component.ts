@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
+import { setToSessionStorage } from 'src/app/utils/session-storage';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -13,6 +14,8 @@ export class AuthorisationPageComponent implements OnInit, OnDestroy {
 
   registration: boolean = false;
   unsubscribe$: Subject<void> = new Subject<void>();
+
+  errorLogin: string;
 
   loginObject = {
     name: '',
@@ -26,7 +29,7 @@ export class AuthorisationPageComponent implements OnInit, OnDestroy {
   }
 
   failLogin: boolean = false;
-  errMessage: string;
+  errorReg: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -44,16 +47,19 @@ export class AuthorisationPageComponent implements OnInit, OnDestroy {
   }
 
   submitLogin() {
+    this.errorLogin = null;
     this.http.get(environment.apiUrl + 'auth/signin', {
       params: this.loginObject
     })
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe({
-        next: (res) => {
+        next: (res: any) => {
           this.router.navigate(['/', 'personal-member']);
+          setToSessionStorage('User', res.values.user);
         },
         error: (err) => {
-          alert(err.error.values.message);
+          console.log(err);
+          this.errorLogin = err?.error?.values?.message;
         }
       })
   }
@@ -63,6 +69,7 @@ export class AuthorisationPageComponent implements OnInit, OnDestroy {
   }
 
   reg(): void {
+    this.errorReg = null;
     this.http.post(environment.apiUrl + 'auth/signup', {
       ...this.regObj
     })
@@ -72,7 +79,8 @@ export class AuthorisationPageComponent implements OnInit, OnDestroy {
           this.router.navigate(['/', 'personal-member']);
         },
         error: (err) => {
-          alert(err.error.values.message);
+          console.log(err);
+          this.errorReg = err?.error?.values?.message;
         }
       })
   }
