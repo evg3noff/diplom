@@ -18,6 +18,9 @@
     flex-direction: column;
     align-items: center;
     height: 1000px;
+    @media (max-width: 1000px){
+        height: auto;
+    }
 }
 .order-container{
     display: flex;
@@ -25,6 +28,9 @@
     height: 300px;
     justify-content: start;
     align-items: center;
+    @media (max-width: 1366px){
+        width: auto;
+    }
 }
 .card{
     width: 400px;
@@ -84,6 +90,10 @@
     margin-left: 500px;
     height: 100%;
     flex-direction: column;
+    @media (max-width: 1000px){
+        justify-content: center;
+        margin-left: 0px;
+    }
 }
 .mainPrice{
     font-family: 'SF Pro Display';
@@ -113,6 +123,9 @@
         margin-left: 55%;
         margin-top: 10px;
 
+    }
+    @media (max-width: 1000px){
+        margin-left: 0%;
     }
 }
 #button1{
