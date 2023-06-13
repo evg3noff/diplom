@@ -46,7 +46,7 @@
                     кабинет
                 </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item" routerLink="/order-story">
                 <div class="menu-item-icon center-container">
                     <mat-icon aria-hidden="false" aria-label="заказы" fontIcon="work" class="work"></mat-icon>
                 </div>
@@ -54,7 +54,7 @@
                     Заказы
                 </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item" routerLink="/goods/likes">
                 <div class="menu-item-icon center-container">
                     <mat-icon aria-hidden="false" aria-label="избранное" fontIcon="favorite" class="favorite"></mat-icon>
                 </div>
@@ -62,7 +62,7 @@
                     Избранное
                 </div>
             </li>
-            <li class="menu-item">
+            <li class="menu-item" routerLink="/cart-story">
                 <div class="menu-item-icon center-container">
                     <mat-icon aria-hidden="false" aria-label="Корзина" fontIcon="shopping_cart" class="shopping_cart"></mat-icon>
                 </div>
@@ -76,10 +76,10 @@
         </ul>
 
         <mat-menu #cabinetMenu="matMenu" xPosition="before">
-            <div mat-menu-item>{{this.userInfo ? 'кабинет' : 'войти'}}</div>
-            <div mat-menu-item>Заказы</div>
-            <div mat-menu-item>Избранное</div>
-            <div mat-menu-item>Корзина</div>
+            <div mat-menu-item routerLink="/personal-member">{{this.userInfo ? 'кабинет' : 'войти'}}</div>
+            <div mat-menu-item routerLink="/goods/order-story">Заказы</div>
+            <div mat-menu-item routerLink="/goods/likes">Избранное</div>
+            <div mat-menu-item routerLink="/goods/cart-story">Корзина</div>
         </mat-menu>
     </div>
 </div>

@@ -2,16 +2,8 @@ import { BehaviorSubject } from 'rxjs';
 
 /** чтобы не забыть как называется какое-то поле, пользоваться только этим типом */
 export type LSInstances =
-  'AuthenticateToken' |
-  'User' |
-  'CurrentUser' |
-  'Phone' |
-  'RoleId' |
-  'AuthTime' |
-  'AuthCountToday' |
-  'EsiaPersonalData' |
-  'PermissionSignature' |
-  'Permission';
+  'User'
+;
 
 const LS_CHANGES$ = new BehaviorSubject<{
   key: LSInstances,

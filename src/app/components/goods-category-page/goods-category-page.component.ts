@@ -12,6 +12,7 @@ export class GoodsCategoryPageComponent implements OnInit, OnDestroy {
   category: undefined | string;
   unsubscribe$: Subject<void> = new Subject<void>();
 
+  likes: boolean = false;
   constructor(
     private route: ActivatedRoute
   ) {
@@ -25,8 +26,12 @@ export class GoodsCategoryPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.route.params.pipe(takeUntil(this.unsubscribe$)).subscribe(res => {
-      this.category = res["GoodsCategory"];
-      console.log(this.category);
+      if(res["GoodsCategory"] !== `likes`){
+        this.category = res["GoodsCategory"]
+      } else {
+        this.likes = true;
+        this.category = res["GoodsCategory"]
+      }
     });
   }
 }

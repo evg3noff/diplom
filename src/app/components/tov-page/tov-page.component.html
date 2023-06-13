@@ -1,26 +1,25 @@
 <app-header></app-header>
-<div class="content"> <!-- action быть не должно-->
-    <div class="section-container">description см коммент в коде</div>
-    <!-- хз что тут добавить кроме описания надо его просто ограничить наверное когда подключишь-->
+<div class="content" *ngIf="good">
+    <div class="section-container">{{good.description}}</div>
     <div class="main-container">
         <div class="order-container">
             <div class="card">
-                <!-- <img [src]="good.img"> -->
+               <img [src]="good.img">
             </div>
             <div class="item-container">
                 <div class="item-category">категория</div>
                 <div class="item-description">
-                    описание товараописание товараописание товараописание товараописание товараописание товараописание
-                    товараописание товара
+                    {{good.description}}
                 </div>
             </div>
             <div class="item-price">
-                <div class="oldPrice">скидка если есть</div>
-                <div class="mainPrice">много деняк</div>
+                <div class="oldPrice" *ngIf="good.oldPrice">{{good.oldPrice}}рублей</div>
+                <div class="mainPrice">{{good.mainPrice}}рублей</div>
             </div>
         </div>
         <div class="actions">
-            <button class="default-button" id="button1">Купить</button>
+            <button class="default-button" id="button1" (click)="clickBuy(good)" *ngIf="checkGoodOnCart(good)">Купить</button>
+            <button class="default-button delete-color" id="button1" (click)="clickDeleteFromCart(good)" *ngIf="!checkGoodOnCart(good)">Удалить</button>
         </div>
     </div>
 </div>

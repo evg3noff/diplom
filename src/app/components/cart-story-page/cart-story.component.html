@@ -2,26 +2,24 @@
 <div class="content">
     <div class="section-container">Корзина</div>
     <div class="main-container">
-        <div class="order-container">
+        <div class="order-container" *ngFor="let good of goods">
             <div class="card">
-               <!-- <img [src]="good.img"> -->
+               <img [src]="good.img">
             </div>
             <div class="item-container">
                 <div class="item-category">категория</div>
                 <div class="item-description">
-                    описание товараописание товараописание товараописание товараописание товараописание товараописание товараописание товара
+                    {{good.description}}
                 </div>
             </div>
             <div class="item-price">
-                <div class="oldPrice">скидка если есть</div>
-                <div class="mainPrice">много деняк</div>
+                <div class="oldPrice" *ngIf="good.oldPrice">{{good.oldPrice}} рублей</div>
+                <div class="mainPrice">{{good.mainPrice}} рублей</div>
             </div>
         </div>
-        <div class="order-container">для примера потом поменять</div>
-        <div class="order-container">для примера потом поменять</div>
         <div class="actions">
-            <div class ="ScorePrice">Стоимость заказа:(price)</div>
-            <button class="default-button" id="button1">Купить</button>
+            <div class ="ScorePrice">Стоимость заказа: {{finalPrice}} рублей</div>
+            <button class="default-button" id="button1" (click)="sendOrder()">Купить</button>
         </div>
     </div>
 </div>
