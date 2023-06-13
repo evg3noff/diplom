@@ -9,4 +9,5 @@ export const environment = {
     },
     production: false,
     apiUrl: "http://technospot64.ru:3500/api/"
+    //TODO поменять
 };

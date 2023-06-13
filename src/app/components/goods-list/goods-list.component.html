@@ -1,10 +1,13 @@
 <div class="center-horizontal-container" *ngIf="main">
     <h2>Рекомендации</h2>
 </div>
+<div class="center-horizontal-container" *ngIf="likes">
+    <h2>Избранное</h2>
+</div>
 <section class="center-horizontal-container">
     <ul class="goods-list">
         <li class="goods-card" *ngFor="let good of goods">
-            <div class="card">
+            <div class="card" [routerLink]="getLink(good)">
                 <img [src]="good.img">
             </div>
             <div class="item-content">
@@ -16,9 +19,12 @@
                     {{good.description}}
                 </div>
                 <div class="actions">
-                    <button class="default-button">Купить</button>
-                    <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="favorite" class="red"></mat-icon>
-                    <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="favorite_border"></mat-icon>
+                    <button class="default-button" (click)="clickBuy(good)" *ngIf="checkGoodOnCart(good)">Купить</button>
+                    <button class="default-button delete-color" (click)="clickDeleteFromCart(good)" *ngIf="!checkGoodOnCart(good)">Удалить</button>
+                    <ng-container *ngIf="isAuth">
+                        <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="favorite" class="red" *ngIf="checkLike(good)" (click)="dislikeClick(good)"></mat-icon>
+                        <mat-icon aria-hidden="false" aria-label="Каталог" fontIcon="favorite_border" *ngIf="!checkLike(good)" (click)="likeClick(good)"></mat-icon>
+                    </ng-container>
                 </div>
             </div>
         </li>
