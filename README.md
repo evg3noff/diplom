@@ -20,6 +20,6 @@
 ## Screenshots
 
 ### PC WIDTH
-![Скриншот PC версии](diplonPC.png)
+![Скриншот PC версии](diplomPC.png)
 ### Mobile WIDTH
-![Скриншот Mobile версии](diplonMobile.png)
+![Скриншот Mobile версии](diplomMobile.png)
